@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackIntegration", "SlackIntegration\SlackIntegration.csproj", "{AA043C23-6BD8-4486-8A49-FD2260A6A089}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1C9251AB-CE37-481C-8BA2-90DD4AF82893} = {1C9251AB-CE37-481C-8BA2-90DD4AF82893}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{8F4E4EC9-6FBE-420E-83D4-D5E9F8B2230C}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{68242259-EBED-44B8-AD89-94B123E5E38B}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\SlackIntegration-WAWS-dev.json = PublishScripts\Configurations\SlackIntegration-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlickrUtilities", "FlickrUtilities\FlickrUtilities.csproj", "{1C9251AB-CE37-481C-8BA2-90DD4AF82893}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA043C23-6BD8-4486-8A49-FD2260A6A089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA043C23-6BD8-4486-8A49-FD2260A6A089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA043C23-6BD8-4486-8A49-FD2260A6A089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA043C23-6BD8-4486-8A49-FD2260A6A089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C9251AB-CE37-481C-8BA2-90DD4AF82893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C9251AB-CE37-481C-8BA2-90DD4AF82893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C9251AB-CE37-481C-8BA2-90DD4AF82893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C9251AB-CE37-481C-8BA2-90DD4AF82893}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{68242259-EBED-44B8-AD89-94B123E5E38B} = {8F4E4EC9-6FBE-420E-83D4-D5E9F8B2230C}
+	EndGlobalSection
+EndGlobal
