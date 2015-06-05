@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{29E682
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackIntegrations.Objects", "SlackIntegrations.Objects\SlackIntegrations.Objects.csproj", "{31CB3587-9385-4C0D-B578-BDC7ABFCF2F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlackIntegrations.Console", "SlackIntegrations.Console\SlackIntegrations.Console.csproj", "{FC6F4A00-F2DC-457D-AD88-9917F8408C29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +32,14 @@ Global
 		{AA043C23-6BD8-4486-8A49-FD2260A6A089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA043C23-6BD8-4486-8A49-FD2260A6A089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA043C23-6BD8-4486-8A49-FD2260A6A089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CB3587-9385-4C0D-B578-BDC7ABFCF2F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CB3587-9385-4C0D-B578-BDC7ABFCF2F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CB3587-9385-4C0D-B578-BDC7ABFCF2F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CB3587-9385-4C0D-B578-BDC7ABFCF2F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6F4A00-F2DC-457D-AD88-9917F8408C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6F4A00-F2DC-457D-AD88-9917F8408C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6F4A00-F2DC-457D-AD88-9917F8408C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6F4A00-F2DC-457D-AD88-9917F8408C29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace SlackIntegration.Controllers
+namespace SlackIntegrations.Controllers
 {
 	public class ImageController : ApiController
 	{

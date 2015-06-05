@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace SlackIntegration.Controllers
+namespace SlackIntegrations.Controllers
 {
 	public class InfoController : ApiController
 	{

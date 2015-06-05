@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace SlackIntegration
+namespace SlackIntegrations
 {
     public static class WebApiConfig
     {
