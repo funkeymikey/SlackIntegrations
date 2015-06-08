@@ -45,25 +45,32 @@ namespace SlackIntegrations.Controllers
 			string command,
 			string text)
 		{
-			TinyStoryRequest request = this.parseText(text);
-			
+			try
+			{
+				TinyStoryRequest request = this.parseText(text);
 
-			//where should the story go? assume backlog
-			string postUrl = "https://doolli.tinypm.com/api/project/" + this.ProjectId + "/userstories";
-			if(request.StoryLocation == TinyStoryLocation.Sprint)
-				postUrl = "https://doolli.tinypm.com/api/project/" + this.ProjectId + "/iteration/current/userstories";
-			
-			string postContent = JsonConvert.SerializeObject(request, SerializerSettings);
 
-			//do the update
-			HttpClient client = new HttpClient();
-			client.DefaultRequestHeaders.Add("apiToken", this.ApiToken);
-			HttpResponseMessage response = await client.PostAsync(postUrl, new StringContent(postContent));
-			response.EnsureSuccessStatusCode();
+				//where should the story go? assume backlog
+				string postUrl = "https://doolli.tinypm.com/api/project/" + this.ProjectId + "/userstories";
+				if (request.StoryLocation == TinyStoryLocation.Sprint)
+					postUrl = "https://doolli.tinypm.com/api/project/" + this.ProjectId + "/iteration/current/userstories";
 
-			TinyId resultingId = await response.Content.ReadAsAsync<TinyId>();
+				string postContent = JsonConvert.SerializeObject(request, SerializerSettings);
 
-			return "https://doolli.tinypm.com/userStory/edit/" + resultingId.Id + "?projectCode=Doolli";
+				//do the update
+				HttpClient client = new HttpClient();
+				client.DefaultRequestHeaders.Add("apiToken", this.ApiToken);
+				HttpResponseMessage response = await client.PostAsync(postUrl, new StringContent(postContent));
+				response.EnsureSuccessStatusCode();
+
+				TinyId resultingId = await response.Content.ReadAsAsync<TinyId>();
+
+				return "https://doolli.tinypm.com/userStory/edit/" + resultingId.Id + "?projectCode=Doolli";
+			}
+			catch (Exception ex)
+			{
+				return ex.Message;
+			}
 		}
 
 		private TinyStoryRequest parseText(string text)
